@@ -11,16 +11,19 @@ The review_id_table:
 ![Screen Shot 2022-08-01 at 1 10 36 PM](https://user-images.githubusercontent.com/99676466/182245747-db61458a-8767-49bd-a9fb-3c8ef1fa62fd.png)
 
 The customers_table:
+
 ![Screen Shot 2022-08-01 at 1 10 19 PM](https://user-images.githubusercontent.com/99676466/182245764-de8076aa-8eca-450a-8feb-90ebe4de0c1a.png)
 
 The products_table:
+
 ![Screen Shot 2022-08-01 at 1 09 55 PM](https://user-images.githubusercontent.com/99676466/182245781-1611a52a-e29b-4431-a161-0023a8907d5f.png)
 
 The vine_table:
+
 ![Screen Shot 2022-08-01 at 1 10 58 PM](https://user-images.githubusercontent.com/99676466/182245930-7f8b5844-10e9-4e90-913d-f4b71fc195c7.png)
 
 
-### Results: Using bulleted lists and images of DataFrames as support, address the following questions:
+### Results: 
 The analysis begins with the creation of the Vine table with star ratings, helpful votes, total votes, whether or no the review is part of the Vine program, and if the purchase was verified. The first table is filtered to show only total votes over 20. Then that table is filtered to show the helpful votes that are over 50%. Then there are two tables; one shows which reviews are in the Vine program and which are not.
 The vine table filtered ot show 50% helpful votes is shown below:
 
@@ -55,8 +58,9 @@ percent_fivestar_paid = (five_star_paid/total_review)*100
 percent_fivestar_paid ~~~
 ~~~ 
 percent_fivestar_unpaid = (five_star_unpaid/total_review_unpaid)*100
-percent_fivestar_unpaid 
-~~~
+percent_fivestar_unpaid
+~~
 
-### Summary: 
-In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
+### Summary 
+
+There does not appear to be a bias toward the reviews in the Vine program, there are both more reviews that are unpaid and a higher percentage of positive 5 star reviews in that are unpaid. If the paid reviews were mostly 5 star reviews, then there would be a bias. Another helpful analysis that could help with determining if there is bias toward Vine program reviews would be to filter the verified purchase column for purchases that were verified and see how the five star reviews compared with verified purchases in and out of the Vine porgram.
