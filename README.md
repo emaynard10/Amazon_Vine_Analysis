@@ -1,6 +1,7 @@
 # Amazon_Vine_Analysis
+The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. This project accesses approximately 50 datasets. Each one contains reviews of a specific product, from clothing apparel to wireless products. The analysis picks one of these datasets and uses PySpark to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. Next, using PySpark, determine if there is any bias toward favorable reviews from Vine members in your dataset. 
 
-#### Tools: PySpark, Google Colaboratory, Postgress/Pgadmin, AWS
+#### Tools: PySpark, Google Colaboratory, Postgress/Pgadmin, AWS, Pandas
 
 ### Overview of the analysis: 
 
@@ -48,19 +49,21 @@ five_star_paid = paid_df.filter(paid_df.star_rating ==5).count()
 five_star_paid
 ~~~
 And there were 20,612 five star unpaid reviews that are not a part of the Vine program.
-~~~ five_star_unpaid = unpaid_df.filter(unpaid_df.star_rating == 5).count()
-five_star_unpaid ~~~
+~~~ 
+five_star_unpaid = unpaid_df.filter(unpaid_df.star_rating == 5).count()
+five_star_unpaid 
+~~~
 
 * What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
 The percent of Vine reviews that were five stars was 38.24% whereas the percent of unpaid five star reviews was 54.47%. 
 
-~~~ 
+~~~
 percent_fivestar_paid = (five_star_paid/total_review)*100
 percent_fivestar_paid
  
 percent_fivestar_unpaid = (five_star_unpaid/total_review_unpaid)*100
 percent_fivestar_unpaid
-~~
+~~~
 
 ### Summary 
 
