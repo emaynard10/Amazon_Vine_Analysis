@@ -8,6 +8,7 @@ The purpose of this analysis is to determine if the there is bias in the paid re
 
 The four tables created with data loaded into pgadmin from the AWS RDS connection are shown below:
 The review_id_table:
+
 ![Screen Shot 2022-08-01 at 1 10 36 PM](https://user-images.githubusercontent.com/99676466/182245747-db61458a-8767-49bd-a9fb-3c8ef1fa62fd.png)
 
 The customers_table:
@@ -35,8 +36,7 @@ There were far more non-Vine reviews than Vine reviews, 37,840 unpaid, non-vine 
 ~~~
 total_review_unpaid = unpaid_df.count()
 total_review_unpaid
-~~~
-~~~
+
 total_review = paid_df.count()
 total_review
 ~~~
@@ -47,7 +47,8 @@ Of the 170 Vine reviews 65 of them were five star reviews.
 five_star_paid = paid_df.filter(paid_df.star_rating ==5).count()
 five_star_paid
 ~~~
-And there were 20,612 five star unpaid reviews that are not a part of the Vine program. ~~~ five_star_unpaid = unpaid_df.filter(unpaid_df.star_rating == 5).count()
+And there were 20,612 five star unpaid reviews that are not a part of the Vine program.
+~~~ five_star_unpaid = unpaid_df.filter(unpaid_df.star_rating == 5).count()
 five_star_unpaid ~~~
 
 * What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
@@ -55,8 +56,8 @@ The percent of Vine reviews that were five stars was 38.24% whereas the percent 
 
 ~~~ 
 percent_fivestar_paid = (five_star_paid/total_review)*100
-percent_fivestar_paid ~~~
-~~~ 
+percent_fivestar_paid
+ 
 percent_fivestar_unpaid = (five_star_unpaid/total_review_unpaid)*100
 percent_fivestar_unpaid
 ~~
